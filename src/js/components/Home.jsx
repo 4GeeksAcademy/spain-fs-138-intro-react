@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //include images into your bundle
 import Navbar from "./Navbar";
@@ -15,7 +15,7 @@ const Home = () => {
 		{ name: 'Carlos', age: 40, job: 'Profesor' }
 	]
 
-
+	const [view, setView] = useState(true)
 	console.log(users)
 
 	return (
@@ -24,16 +24,25 @@ const Home = () => {
 			<div className='container mt-5'>
 				<h1 className='text-center mb-4'>Lista de Usuarios</h1>
 
-				<div className='row justify-content-center'>
-					{users.map((user, index) => (
-						<CardUser
-							key={index}
-							name={user.name}
-							age={user.age}
-							job={user.job}
-						/>
-					))}
+				<div className='text-center mb-4'>
+					<button className='btn btn-success' onClick={() => setView(v => !v)}>
+						{view ? 'Ocultar tarjetas' : 'Mostrar tarjetas'}
+					</button>
 				</div>
+
+
+				{view === true ? (
+					<div className='row justify-content-center'>
+						{users.map((user, index) => (
+							<CardUser
+								key={index}
+								name={user.name}
+								age={user.age}
+								job={user.job}
+							/>
+
+						))}
+					</div>) : null}
 
 				<Faq />
 			</div>
