@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 //include images into your bundle
-import Navbar from "./Navbar";
-import CardUser from "./CardUser";
-import Faq from "./Faq";
-import Footer from "./Footer";
+import Navbar from "./old/Navbar";
+import CardUser from "./old/CardUser";
+import Faq from "./old/Faq";
+import Footer from "./old/Footer";
 
 //create your first component
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
 		{ name: 'Carlos', age: 40, job: 'Profesor' }
 	]
 
-	const [view, setView] = useState(true)
+	const [view, setView] = useState([true])
 	console.log(users)
 
 	return (
@@ -25,7 +25,7 @@ const Home = () => {
 				<h1 className='text-center mb-4'>Lista de Usuarios</h1>
 
 				<div className='text-center mb-4'>
-					<button className='btn btn-success' onClick={() => setView(v => !v)}>
+					<button className='btn btn-success' onClick={() => setView((preView) => !preView)}>
 						{view ? 'Ocultar tarjetas' : 'Mostrar tarjetas'}
 					</button>
 				</div>
