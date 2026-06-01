@@ -10,38 +10,17 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
-import CardUser from './components/CardUser';
+import SecondCounter from './components/SecondCounter';
+import Counter from './components/Counter';
 
 const nodeHtml = document.getElementById('root')
 const vitualNodeHtml = ReactDOM.createRoot(nodeHtml)
 
-let counter = 1
-const usuarios = [{ name: `Estudiante ${counter}`, age: counter, job: 'n/a' }]
 
-setInterval(() => {
-  counter++
+vitualNodeHtml.render(
+  <SecondCounter />
+)
 
-  usuarios.push(
-    {
-      name: `Estudiante ${counter}`, age: counter, job: 'n/a'
-    }
-  )
-
-  vitualNodeHtml.render(
-    <>
-      {
-        usuarios.map((user, index) => (
-          < CardUser
-            key={index}
-            name={user.name}
-            age={user.age}
-            job={user.job}
-          />)
-        )}
-    </>
-  )
-
-}, 2000)
 
 
 
