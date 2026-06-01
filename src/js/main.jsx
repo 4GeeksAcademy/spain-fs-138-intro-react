@@ -9,7 +9,6 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import Home from './components/Home';
 import SecondCounter from './components/SecondCounter';
 import Counter from './components/Counter';
 
