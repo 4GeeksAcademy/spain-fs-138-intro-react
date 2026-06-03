@@ -7,17 +7,17 @@ import "bootstrap"
 
 // index.css'
 import '../styles/index.css'
+import BasicForm from './components/BasicForm';
+import Shop from './components/Shop';
 
 // components
-import SecondCounter from './components/SecondCounter';
-import Counter from './components/Counter';
 
 const nodeHtml = document.getElementById('root')
 const vitualNodeHtml = ReactDOM.createRoot(nodeHtml)
 
 
 vitualNodeHtml.render(
-  <SecondCounter />
+  <Shop />
 )
 
 
