@@ -7,8 +7,8 @@ import "bootstrap"
 
 // index.css'
 import '../styles/index.css'
-import BasicForm from './components/BasicForm';
-import Shop from './components/Shop';
+import PostCrudWithOutFetch from './components/PostCrudWithOutFetch';
+import PostCrudWithFetch from './components/PostCrudWithFetch';
 
 // components
 
@@ -17,7 +17,7 @@ const vitualNodeHtml = ReactDOM.createRoot(nodeHtml)
 
 
 vitualNodeHtml.render(
-  <Shop />
+  <PostCrudWithFetch />
 )
 
 
